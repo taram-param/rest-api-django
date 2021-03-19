@@ -25,20 +25,19 @@
     `python manage.py runserver`
     
 #
-Корневая точка http://localhost:8000/api/system/
+Регистрация пользователя, просмотр всех пользователей http://localhost:8000/auth/users/
+
+Текущий пользователь http://localhost:8000/auth/users/me/
+
+Генерация JWT токена http://localhost:8000/auth/jwt/create/
+
+Рефреш токена http://localhost:8000/auth/jwt/refresh/
 
 Админка http://localhost:8000/admin/
 
-Конечная точка для генерации JWT токена http://localhost:8000/api/token/
-#
-Шаблон JSON Post запроса:
+Все сборы данного юзера http://localhost:8000/api/system/
 
-```
-{"person": {
-    "title": "somebody",
-    "age": 42,
-    "address": "something"
-    }
-}
-```
+Определенный сбор и информация по нему http://localhost:8000/api/system/<pk>
+
+
 

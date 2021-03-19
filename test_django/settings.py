@@ -38,12 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'djoser',
+
     # Local Apps
     'system',
 
     # Third-party Apps
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework_simplejwt'
 ]
 
 REST_FRAMEWORK = {
