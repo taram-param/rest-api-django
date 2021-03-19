@@ -22,10 +22,14 @@ class Fundraising(models.Model):
 
 class Fee(models.Model):
 
-    user = models.OneToOneField(User, verbose_name="Пользователь", on_delete=models.CASCADE)
+    user = models.OneToOneField(User, verbose_name="Плательщик", on_delete=models.CASCADE)
     fundraising = models.ForeignKey(Fundraising, verbose_name="Событие", on_delete=models.CASCADE)
     date = models.DateTimeField("Дата оплаты", default=timezone.now)
     amount = models.IntegerField("Сумма", null=False)
 
     def __str__(self):
         return self.user.username
+
+    class Meta:
+        verbose_name = "Платёж"
+        verbose_name_plural = "Платежи"
